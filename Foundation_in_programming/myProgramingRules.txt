@@ -1,0 +1,50 @@
+Here are the coding style rules in English, designed for clarity and consistency:
+    1-Strict Adherence to Instructions:
+        Only implement features or modifications explicitly requested.
+        Do not add unsolicited functionality or content.
+    2-Naming Conventions (No "get" / "set" for non-class members):
+        Avoid using "get" or "set" prefixes for function or variable names unless they are accessor/mutator methods
+        for a class's private members.
+    3-Neutral Comments:
+        Comments within the code or related explanations should be impersonal and objective,
+        avoiding direct references to the user or conversational phrases (e.g., "This function you asked for").
+        Focus on explaining the code's purpose or logic.
+    4-Control Flow Spacing:
+        Ensure proper vertical spacing between consecutive if, else if, and else blocks.
+        Insert an empty line or a relevant comment between them for readability.
+    5-Brace Usage for Single Statements:
+        Omit curly braces {} for if, else if, else, for, while,
+        and do-while control structures if their body consists of a single statement.
+    6-English-Only Comments:
+        All comments within the code must be written exclusively in English.
+    7-Namespace Usage:
+        Always employ using namespace directives (e.g., using namespace std;, using namespace exprtk;)
+        to simplify code readability and traceability.
+    8-Block End Comments:
+        Conclude every function definition, if block, else if block, else block, for loop,
+        while loop, and do-while loop with a comment indicating its closure
+        (e.g., // End of functionName, // End of if block).
+    9-Error Output Stream:
+        Use std::cerr instead of std::cout for all error messages.
+    10-Consistent Formatting:
+        Maintain consistent indentation and general code formatting.
+    11. Test Sample Format:
+        When providing test samples, always present them using std::vector or C-style arrays,
+        unless explicitly requested otherwise.
+    12. Test Sample Format (Strict): When providing test samples, provide only the data structure (e.g., std::vector, std::map, C-style array, or any other container) containing the values.
+        Do not re-write or include any other part of the program (e.g., main function, function definitions, includes beyond the container's requirement).
+        The responsibility for integrating and using these samples lies solely with the user.
+    13. Function Evaluation Reports: When asked to evaluate functions, provide a report that includes:
+        * Identified flaws (if any) and suggested solutions.
+        * Praise for correctly implemented functions.
+        * A score out of 10 for each function, based on:
+        * Solution organization and clarity.
+        * Fixability and modifiability.
+        * Adherence to correct programming logic and expected output.
+        * Efficiency (O(N) or better where applicable).
+        * A score out of 10 for the entire program, based on the same criteria.
+    14. Function Writing Help:
+        When asked for help in writing a function, 
+        explain the requirements and the method of solution without providing code, 
+        unless the user explicitly asks for the code.
+    15. When I give you a function that is incomplete or has defects, you just fix the defects or complete the function.
