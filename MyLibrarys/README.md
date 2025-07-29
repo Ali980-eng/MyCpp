@@ -47,4 +47,4 @@ Although this repository started as a learning and experimentation space, the **
 This project is licensed under the MIT License.  
 You are free to use, modify, and distribute these libraries in personal, educational, or commercial projects, provided that you include the original license notice.
 
-See the [MIT LICENSE](./MIT LICENSE) file for full details.
+See the [LICENSE](./LICENSE) file for full details.
