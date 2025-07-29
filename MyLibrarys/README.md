@@ -41,3 +41,10 @@ Although this repository started as a learning and experimentation space, the **
 
 - All code is written and organized according to my personal development style and preferences.
 - This is an evolving project, and structure or design decisions may change over time.
+
+## License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute these libraries in personal, educational, or commercial projects, provided that you include the original license notice.
+
+See the [MIT LICENSE](./MIT LICENSE) file for full details.
