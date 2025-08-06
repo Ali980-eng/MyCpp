@@ -5,7 +5,7 @@ A lightweight and flexible C++ header library for simplifying input/output opera
 
 ---
 
-## ✨ Features
+## Features
 
 - Simplified and customizable printing functions.
 - Utility functions for formatted input/output.
@@ -13,5 +13,3 @@ A lightweight and flexible C++ header library for simplifying input/output opera
 - Designed for competitive programming, teaching, or quick prototyping.
 
 ---
-
-## 📂 Structure
