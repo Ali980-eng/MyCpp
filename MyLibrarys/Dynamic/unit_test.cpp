@@ -1,6 +1,6 @@
 #include <cassert>
-#include "E:\Myfiles\programing\c++\ProgrammingLibrarys\MyLibrarys\lab\Dynamic.hpp"
-#include "E:\Myfiles\programing\c++\ProgrammingLibrarys\MyLibrarys\lab\test_tools.hpp"
+#include "Dynamic.hpp"
+#include "test_tools.hpp"
 using namespace std;
 void test_1(int expected)
 {
