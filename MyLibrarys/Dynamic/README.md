@@ -1,6 +1,6 @@
 # udt::dynamic – A Flexible Multi-Type Data Container in C++
 
-`edt::dynamic` is a custom C++ type designed to store and manage multiple fundamental data types within a single object.  
+`udt::dynamic` is a custom C++ type designed to store and manage multiple fundamental data types within a single object.  
 It uses `std::unique_ptr` for automatic memory management and takes advantage of operator overloading and type deduction to provide a seamless and flexible interface.
 
 ---
