@@ -17,4 +17,4 @@ A modern C++ library that provides numerical methods and techniques commonly use
 Just clone this repository and include the `include/` folder in your project:
 
 ```bash
-git clone https://github.com/yourusername/NTE-cpp.git
+git clone https:[//github.com/yourusername/NTE-cpp.git](https://github.com/Ali980-eng/MyCpp/blob/main/MyLibrarys/Numerical/V1/Numerical.hpp)
