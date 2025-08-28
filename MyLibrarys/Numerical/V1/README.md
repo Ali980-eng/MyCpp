@@ -13,8 +13,3 @@ Version 2 introduces a cleaner and more professional I/O handling system.
 - Tested with **GoogleTest**.
 - Improved **InOut.hpp V2** for input/output operations.
 
-## 📦 Installation
-Clone and include the `include/` folder:
-
-```bash
-git clone https://github.com/Ali980-eng/NTE-cpp.git
