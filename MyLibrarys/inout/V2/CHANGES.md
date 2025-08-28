@@ -1,7 +1,7 @@
 
 ---
 
-## 📄 CHANGES.md (التغييرات بين V1 و V2)
+## 📄 CHANGES.md (V1 و V2)
 
 ```markdown
 # Changes from InOut.hpp V1 to V2
