@@ -1,7 +1,7 @@
 #pragma once
 #ifndef PROGRAMING_C___PROGRAMMINGLIBRARYS_MYLIBRARYS_NUMERICAL_HPP
 #define PROGRAMING_C___PROGRAMMINGLIBRARYS_MYLIBRARYS_NUMERICAL_HPP
-#include "E:\Myfiles\programing\c++\ProgrammingLibrarys\MyLibrarys\lab\InOut.hpp"
+#include "InOut.hpp"
 #include <sstream>
 #include <functional>
 #include <cmath>
