@@ -165,6 +165,58 @@ namespace test
                 return "O(2^n) or O(n!)";
         }
     }
+    namespace size
+    {
+        template <typename T>
+        constexpr size_t mata_data(T &object) noexcept
+        {
+            return sizeof(object);
+        }
+        template <typename T>
+        constexpr size_t heap_data(const std::vector<T> &v)
+        {
+            return sizeof(T) * v.capacity();
+        }
+        size_t heap_data(const std::string &s)
+        {
+            return sizeof(char) * s.capacity();
+        }
+        template <typename T>
+        size_t function_data(std::function<T()> f)
+        {
+            PROCESS_MEMORY_COUNTERS info1, info2;
+            GetProcessMemoryInfo(GetCurrentProcess(), &info1, sizeof(info1));
+            f();
+            GetProcessMemoryInfo(GetCurrentProcess(), &info2, sizeof(info2));
+            if (info2.WorkingSetSize > info1.WorkingSetSize)
+                return info2.WorkingSetSize - info1.WorkingSetSize;
+            else
+                return 0;
+        }
+        template <typename T>
+        size_t function_data(std::function<T(T)> f, T input)
+        {
+            PROCESS_MEMORY_COUNTERS info1, info2;
+            GetProcessMemoryInfo(GetCurrentProcess(), &info1, sizeof(info1));
+            f(input);
+            GetProcessMemoryInfo(GetCurrentProcess(), &info2, sizeof(info2));
+            if (info2.WorkingSetSize > info1.WorkingSetSize)
+                return info2.WorkingSetSize - info1.WorkingSetSize;
+            else
+                return 0;
+        }
+        template <typename T1, typename T2>
+        size_t function__data(std::function<T1(T2)> f, T2 input)
+        {
+            PROCESS_MEMORY_COUNTERS info1, info2;
+            GetProcessMemoryInfo(GetCurrentProcess(), &info1, sizeof(info1));
+            f(input);
+            GetProcessMemoryInfo(GetCurrentProcess(), &info2, sizeof(info2));
+            if (info2.WorkingSetSize > info1.WorkingSetSize)
+                return info2.WorkingSetSize - info1.WorkingSetSize;
+            else
+                return 0;
+    }
     /**
      * @brief Structure to keep track of test counts for different categories.
      *
