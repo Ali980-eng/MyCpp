@@ -52,6 +52,6 @@ Example:
 #include "CXXLite.hpp"
 
 int main() {
-    console::print("Hello, CXXLite!");
+    io::print("Hello, CXXLite!");
     return 0;
 }
