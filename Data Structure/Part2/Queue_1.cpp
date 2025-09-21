@@ -1,5 +1,5 @@
 #include <iostream>
-#include "E:\Myfiles\programing\c++\ProgrammingLibrarys\MyLibrarys\lab\InOut.hpp"
+#include "InOut.hpp"
 using namespace std;
 template <typename T>
 class Queue_arr
