@@ -1,30 +1,25 @@
-CXXLite Framework License (v1.0)
+License Terms for CXXLite (v1.0)
 --------------------------------
 
-Copyright © 2025 Ali Lafi. All rights reserved.
+Copyright © 2025 Ali Lafi
 
-Ownership:
-The original creator, Ali Lafi, retains all intellectual property rights
-to the source code, even if it is modified, transferred, or incorporated
-into other works.
+1. This framework is free to use and modify for personal, educational,
+   or commercial projects, provided that proper attribution is given
+   to the original creator, Ali Lafi.
 
-Terms of Use:
-1. This framework is free of charge and may be used and modified without restriction.
-2. Redistribution of this framework, whether free of charge or commercially,
-   is strictly prohibited.
-3. If you wish to share the framework with others, you must provide them
-   with the official download link to the original repository.
-4. Users are allowed to build upon this framework and develop commercial
-   projects using it, provided that proper credit is given to
-   the original creator, Ali Lafi.
-5. All copyright and attribution notices must be preserved in any modified
-   or derivative works.
+2. Redistribution of the source code is allowed **only by sharing
+   the official link** to the original repository as published by
+   the creator (e.g., on LinkedIn or GitHub). Direct re-uploading
+   or republishing of the source code elsewhere is prohibited.
 
-Liability:
-- This framework is provided "as is," without any warranties of any kind,
-  either express or implied.
-- The creator, Ali Lafi, shall not be held liable for any damages, losses,
-  or legal issues resulting from the misuse, incorrect, or improper use
-  of this framework.
+3. The creator, Ali Lafi, retains all intellectual property rights
+   to the original code, even if modified or incorporated into other works.
 
-By using this framework, you fully agree to the terms of this license.
+4. Users may build commercial or non-commercial projects upon this framework,
+   but must preserve all copyright and attribution notices.
+
+5. This framework is provided "as is," without warranty of any kind.
+   The creator, Ali Lafi, is not responsible for any damages, misuse,
+   or legal issues arising from its use.
+
+By using this framework, you agree to these terms.
