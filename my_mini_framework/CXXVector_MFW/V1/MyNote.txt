@@ -1,0 +1,147 @@
+NOTE:
+- The following class was an early attempt to represent matrices using raw pointers.
+- While it served as a valuable learning experience, it lacked safety, flexibility,
+- and modern C++ design principles such as RAII and template generalization.
+- Despite its functional structure, the manual memory management and type rigidity
+- made it fragile and prone to errors.
+- This experience became the inspiration behind the creation of `vector_tools.hpp` —
+- a robust, type-safe, and template-based library designed to handle T 1D, 2D,
+- and 3D vector structures in a more modern and maintainable way.
+class Matrix {
+    private:
+    int n, m; 
+    double** matrix;
+    double** matrix_T; 
+    public:
+    Matrix() : n(0), m(0), matrix(nullptr), matrix_T(nullptr) {}
+    void set_size(int N, int M) {
+        if (matrix) {
+            for (int i = 0; i < n; ++i) delete[] matrix[i];
+            delete[] matrix;
+        }
+        if (matrix_T) {
+            for (int i = 0; i < m; ++i) delete[] matrix_T[i];
+            delete[] matrix_T;
+        }
+        n = N;
+        m = M;
+        matrix = new double*[n];
+        for (int i = 0; i < n; ++i) matrix[i] = new double[m];
+        matrix_T = new double*[m];
+        for (int i = 0; i < m; ++i) matrix_T[i] = new double[n];
+    }        
+    void set_values() {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                cout << "matrix[" << i << "][" << j << "] = ";
+                cin >> matrix[i][j];
+            }
+        }
+    }
+    bool DiagonalMatrixTest() {
+        if (m != n) return false;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i != j && matrix[i][j] != 0)
+                    return false;
+            }
+        }
+        return true;
+    }        
+    bool IdentityMatrixTest() {
+        if (m != n) return false;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == j && matrix[i][j] != 1) return false;
+                if (i != j && matrix[i][j] != 0) return false;
+            }
+        }
+        return true;
+    }       
+    bool UpperTriangularTest() {
+        if (m != n) return false;
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (matrix[i][j] != 0)
+                    return false;
+            }
+        }
+        return true;
+    }    
+    bool LowerTriangularTest() {
+        if (m != n) return false;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (matrix[i][j] != 0)
+                    return false;
+            }
+        }
+        return true;
+    }    
+    bool SingularMatrixTest() {
+        return Determinant() == 0;
+    }    
+    string MatrixTest() {
+        if(IdentityMatrixTest()) return "Upper Triangular Matrix";
+        else if(DiagonalMatrixTest()) return "Lower Triangular Matrix";
+        else if(UpperTriangularTest()) return "Diagonal Matrix";
+        else if(LowerTriangularTest()) return "Identity Matrix";
+        else if(SingularMatrixTest()) return "Singular Matrix";
+        else return "Square Matrix";
+    }
+    string TypesOfMatrices(char ch = '?') {
+        if (n == 1 && m > 2) return "Row Matrix";
+        else if (n > 2 && m == 1) return "Column Matrix";
+        else if (n == m) return MatrixTest();
+        else if (m > n) return "Rectangular Matrix";
+        else return "Not Valid Matrix";
+    }
+    void Transpose() {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix_T[i][j] = matrix[j][i];
+            }
+        }
+    }
+    double Determinant() {
+        if (n == m && n == 2) return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+        else if(n == m && n == 3) {
+            double Ad = 0, Bb = 0, Cd = 0;
+            for(int i = 0; i < n; i++) {
+                if (i == 0) Ad = matrix[0][0] * (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][1]);
+                else if (i == 1) Bb = matrix[0][1] * (matrix[1][0] * matrix[2][2] - matrix[1][2] * matrix[2][0]);
+                else Cd = matrix[0][2] * (matrix[1][0] * matrix[2][1] - matrix[1][1] * matrix[2][0]);
+            }
+            return (Ad - Bb + Cd);
+        }
+        else return -1;
+    }  
+    void show_matrix() {
+        for (int i=0; i<n; i++) {
+            cout<<"row["<<i+1<<"] = "<<"|  ";
+            for (int j=0; j<m; j++) {
+                if(j == m-1) cout<<matrix[i][j]<<"  |" <<endl;
+                else cout << matrix[i][j] << "  ";
+            }
+        }
+    }
+    void show_Transpose() {
+        for (int i=0; i<n; i++) {
+            cout<<"Transpose_row["<<i+1<<"] = "<<"|  ";
+            for (int j=0; j<m; j++) {
+                if(j == m-1) cout<<matrix_T[i][j]<<"  |" <<endl;
+                else cout << matrix_T[i][j] << "  ";
+            }
+        }
+    }
+    ~Matrix() {
+        if (matrix) {
+            for (int i = 0; i < n; ++i) delete[] matrix[i];
+            delete[] matrix;
+        }
+        if (matrix_T) {
+            for (int i = 0; i < m; ++i) delete[] matrix_T[i];
+            delete[] matrix_T;
+        }
+    }        
+};
