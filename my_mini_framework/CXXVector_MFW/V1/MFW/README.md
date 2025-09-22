@@ -64,4 +64,4 @@ This project is licensed under a **custom license by Ali Lafi**.
 - Free to use and modify.  
 - Redistribution is only allowed via the **official link provided by the author**.  
 - The author retains copyright.  
-- See [LICENSE](./LICENSE) for details.
+- See [[LICENSE](./LICENSE)](https://github.com/Ali980-eng/MyCpp/blob/main/my_mini_framework/CXXVector_MFW/V1/LICENSE) for details.
