@@ -1,5 +1,5 @@
-#include "E:\Myfiles\programing\c++\ProgrammingLibrarys\MyLibrarys\VT_Librarys\CXXVector.hpp"
-#include "E:\Myfiles\programing\c++\ProgrammingLibrarys\MyLibrarys\lab\BOFramework\CXXLite.hpp"
+#include "CXXVector.hpp"
+#include "CXXLite.hpp"
 void utest_1()
 {
     io::print_category("unit test 1", 3, 60, '*');
